@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kinuvirani/middleware/issues"
   },
-  "homepage": "https://github.com/kinuvirani/middleware#readme"
+  "homepage": "https://github.com/kinuvirani/middleware#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }

@@ -1,10 +1,10 @@
 /* eslint-disable arrow-body-style */
 const db = require("../models");
-const logger = require("../logger");
-const { getMessage } = require("../utils/messages");
-const { getDecodedToken } = require("../utils/token");
+// const logger = require("../logger");
+const { getMessage } = require("./common/messages");
+const { getDecodedToken } = require("./common/token");
 
-exports.userAuthorization = () => {
+exports.userAuthorization = (db) => {
   // eslint-disable-next-line func-names
   return async function (req, res, next) {
     const { user: UserModel } = db;
@@ -22,7 +22,7 @@ exports.userAuthorization = () => {
       if (error.name === "TokenExpiredError") {
         return res.status(405).send(getMessage("SESSION_EXPIRED"));
       }
-      logger.info(error);
+      // logger.info(error);
       return next(error);
     }
   };
