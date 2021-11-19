@@ -6,6 +6,7 @@ const { getDecodedToken } = require("./common/token");
 
 exports.userAuthorization = (db) => {
   // eslint-disable-next-line func-names
+  console.log('dataaa-===', db)
   return async function (req, res, next) {
     const { user: UserModel } = db;
     const token = req.headers.authorization;
