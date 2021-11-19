@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-const db = require("../models");
+// const db = require("../models");
 // const logger = require("../logger");
 const { getMessage } = require("./common/messages");
 const { getDecodedToken } = require("./common/token");
